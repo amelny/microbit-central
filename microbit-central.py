@@ -12,6 +12,7 @@ while True:
     while True:
         
         message = radio.receive()
+        
         if message:
             display.scroll(message)
             
@@ -20,3 +21,6 @@ while True:
         else:
             
             display.show(Image.ASLEEP)
+           
+            
+            

@@ -8,10 +8,17 @@ radio.config(group=23)
 while True:
     display.show(Image.SMILE)
     sleep(400)
-    radio.on()
+   
     while True:
+        radio.config(group=23)
+        radio.on()
         message = radio.receive()
         if message:
-            display.scroll(message)
+            display.scroll(str(message))
             display.show(Image.YES)
+            radio.off()
+            sleep(400)
+        else:
+            radio.off()
+            display.show(Image.ASLEEP)
             sleep(400)

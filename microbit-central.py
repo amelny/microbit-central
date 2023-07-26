@@ -13,11 +13,10 @@ while True:
         
         message = radio.receive()
         if message:
-            display.scroll(str(message))
-            display.show(Image.YES)
+            display.scroll(message)
             
-            sleep(400)
+            
+            sleep(100)
         else:
             
             display.show(Image.ASLEEP)
-            sleep(400)
